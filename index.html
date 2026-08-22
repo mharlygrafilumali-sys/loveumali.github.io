@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Umali | Virtual Operations & Executive Support</title>
+<meta name="description" content="Love Umali — Virtual Operations, Executive Support, Client Support, Research, and Business Administration.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f8f5ef;color:#282624;font-family:'DM Sans',sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+
+.nav{
+position:sticky;top:0;z-index:20;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 7%;
+background:rgba(248,245,239,.95);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #ddd8cf
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:30px;font-weight:700
+}
+
+.logo span{font-style:italic}
+
+.nav nav{display:flex;gap:28px}
+.nav nav a{font-size:13px;color:#55504a}
+
+.nav-cta{
+border:1px solid #282624;
+padding:9px 16px;
+border-radius:30px;
+font-size:13px
+}
+
+.hero{
+min-height:90vh;
+padding:110px 9%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+max-width:1400px;
+margin:auto
+}
+
+.eyebrow,.label{
+font-size:11px;
+letter-spacing:.17em;
+font-weight:700;
+color:#81786d
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:clamp(55px,8vw,105px);
+line-height:.98;
+letter-spacing:-.045em;
+margin:25px 0;
+max-width:1050px
+}
+
+.hero h1 em,.contact h2 em{
+font-weight:600
+}
+
+.hero-copy{
+font-size:19px;
+max-width:650px;
+color:#5c5750
+}
+
+.buttons{
+display:flex;
+gap:12px;
+margin:30px 0
+}
+
+.button{
+display:inline-block;
+padding:14px 21px;
+border-radius:30px;
+font-size:14px;
+font-weight:600
+}
+
+.primary{background:#282624;color:white}
+.secondary{border:1px solid #aaa39a}
+
+.hero-note{
+font-size:12px;
+color:#8b837a
+}
+
+.section{
+padding:105px 9%;
+border-top:1px solid #ddd8cf;
+max-width:1400px;
+margin:auto
+}
+
+.section h2,.contact h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(40px,5vw,65px);
+line-height:1.05;
+letter-spacing:-.035em;
+font-weight:600
+}
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:9vw
+}
+
+.two-col p{color:#5d5852}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.card{
+background:#eee9e0;
+border:1px solid #ded8ce;
+padding:28px;
+min-height:265px
+}
+
+.card h3,.case h3,.process h3{
+font-family:'Playfair Display',serif
+}
+
+.card h3{
+font-size:26px;
+margin-top:40px
+}
+
+.card p{font-size:14px;color:#655f58}
+
+.work{background:#f1ede5;max-width:none}
+
+.work>*{max-width:1150px;margin-left:auto;margin-right:auto}
+
+.case{
+border-top:1px solid #cfc8be;
+padding:45px 0
+}
+
+.case:last-child{border-bottom:1px solid #cfc8be}
+
+.case-grid{
+display:grid;
+grid-template-columns:1fr 1.4fr;
+gap:8vw
+}
+
+.case h3{
+font-size:34px;
+line-height:1.1;
+margin-top:10px
+}
+
+.case p{font-size:14px;color:#655f58}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:20px
+}
+
+.tags span{
+border:1px solid #c6beb4;
+border-radius:30px;
+padding:5px 11px;
+font-size:11px;
+color:#625b53
+}
+
+.tools{
+background:#282624;
+color:#f8f5ef;
+max-width:none
+}
+
+.tools .label{color:#aaa198}
+
+.tool-layout{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8vw
+}
+
+.tool-list{
+display:flex;
+flex-wrap:wrap;
+gap:9px;
+align-content:start
+}
+
+.tool-list span{
+border:1px solid #655f58;
+border-radius:30px;
+padding:8px 12px;
+font-size:12px;
+color:#ddd6cc
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px
+}
+
+.process-grid div{
+border-top:1px solid #cfc8be;
+padding-top:18px
+}
+
+.process-grid h3{
+font-size:26px;
+margin:25px 0 5px
+}
+
+.process-grid p{
+font-size:14px;
+color:#68625b
+}
+
+.contact{
+padding:130px 9%;
+text-align:center;
+background:#e9e2d8
+}
+
+.contact h2{
+font-size:clamp(48px,7vw,85px);
+max-width:1000px;
+margin:25px auto
+}
+
+.contact p{
+color:#69635c;
+margin-bottom:30px
+}
+
+footer{
+padding:28px 7%;
+display:flex;
+justify-content:space-between;
+border-top:1px solid #ddd8cf;
+font-size:11px;
+color:#817970
+}
+
+@media(max-width:800px){
+.nav nav,.nav-cta{display:none}
+.hero,.section,.contact{padding:75px 7%}
+.two-col,.case-grid,.tool-layout{grid-template-columns:1fr;gap:30px}
+.cards,.process-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:520px){
+.hero h1{font-size:50px}
+.cards,.process-grid{grid-template-columns:1fr}
+.buttons{flex-direction:column;align-items:flex-start}
+footer{display:block}
+footer div{margin:5px 0}
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+<a class="logo" href="#home">Love<span>.</span></a>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#work">My Work</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="nav-cta" href="#contact">Let's work together</a>
+</header>
+
+<section id="home" class="hero">
+
+<div class="eyebrow">VIRTUAL OPERATIONS • EXECUTIVE SUPPORT</div>
+
+<h1>
+Behind the scenes,<br>
+<em>I keep things moving.</em>
+</h1>
+
+<p class="hero-copy">
+I help founders and growing teams stay organized, follow through on priorities,
+and handle the details that keep their business running.
+</p>
+
+<div class="buttons">
+<a class="button primary" href="#work">View my work</a>
+<a class="button secondary" href="#contact">Let's connect →</a>
+</div>
+
+<div class="hero-note">
+Based in the Philippines • Remote support worldwide
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<div class="label">01 / ABOUT ME</div>
+
+<div class="two-col">
+
+<div>
+<h2>The person behind the details.</h2>
+</div>
+
+<div>
+<p>
+Hi, I'm <strong>Love</strong> — a virtual operations and client support
+professional who enjoys bringing structure to busy environments.
+</p>
+
+<p>
+My background spans customer support, team leadership, business administration,
+compliance operations, documentation, research, and founder support.
+I'm comfortable working independently, learning new systems quickly,
+and turning a long list of moving pieces into clear next steps.
+</p>
+
+<p>
+I believe good support is more than checking tasks off a list.
+It means paying attention, communicating clearly, anticipating what might
+be needed next, and making your day a little easier.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="services" class="section">
+
+<div class="label">02 / WHAT I CAN HELP WITH</div>
+
+<h2>
+Practical support for the work<br>
+that happens behind the scenes.
+</h2>
+
+<div class="cards">
+
+<article class="card">
+<small>01</small>
+<h3>Operations & Admin</h3>
+<p>
+Task coordination, documentation, trackers, research, SOPs,
+data organization, and day-to-day administrative support.
+</p>
+</article>
+
+<article class="card">
+<small>02</small>
+<h3>Founder Support</h3>
+<p>
+Meeting follow-ups, deliverables, reminders, proposals, invoices,
+client updates, and keeping priorities moving forward.
+</p>
+</article>
+
+<article class="card">
+<small>03</small>
+<h3>Client Support</h3>
+<p>
+Email and ticket support, CRM updates, client communication,
+follow-ups, issue tracking, and customer experience support.
+</p>
+</article>
+
+<article class="card">
+<small>04</small>
+<h3>Business & Compliance</h3>
+<p>
+Entity formation support, annual report tracking, registered agent
+documentation, compliance research, and document management.
+</p>
+</article>
+
+</div>
+</section>
+
+<section id="work" class="section work">
+
+<div class="label">03 / SELECTED WORK</div>
+
+<h2>What I've worked on.</h2>
+
+<p>
+A few examples of the kind of work I can bring to your team.
+Confidential information is intentionally excluded.
+</p>
+
+<article class="case">
+
+<div class="label">OPERATIONS & COMPLIANCE</div>
+
+<div class="case-grid">
+
+<div>
+<h3>Compliance Operations & Filing Support</h3>
+</div>
+
+<div>
+
+<p>
+<strong>The work:</strong>
+Supported annual report and reinstatement workflows, client reminders,
+document tracking, registered agent updates, and operational reporting.
+</p>
+
+<p>
+<strong>What I brought:</strong>
+Accuracy, deadline tracking, process organization, client communication,
+and consistent follow-through across a high-volume workflow.
+</p>
+
+<div class="tags">
+<span>Compliance</span>
+<span>Tracking</span>
+<span>Client Support</span>
+<span>Documentation</span>
+</div>
+
+</div>
+</div>
+</article>
+
+<article class="case">
+
+<div class="label">FOUNDER SUPPORT & RESEARCH</div>
+
+<div class="case-grid">
+
+<div>
+<h3>Nonprofit Prospect Research</h3>
+</div>
+
+<div>
+
+<p>
+<strong>The work:</strong>
+Researched and qualified nonprofit prospects using public filings,
+websites, LinkedIn, and other research sources.
+</p>
+
+<p>
+<strong>What I brought:</strong>
+Structured research, qualification judgment, clear documentation,
+and concise reporting so a founder could focus on outreach and strategy.
+</p>
+
+<div class="tags">
+<span>Research</span>
+<span>Qualification</span>
+<span>LinkedIn</span>
+<span>Data Research</span>
+</div>
+
+</div>
+</div>
+</article>
+
+<article class="case">
+
+<div class="label">PROCESS IMPROVEMENT</div>
+
+<div class="case-grid">
+
+<div>
+<h3>Trackers, SOPs & Workflow Organization</h3>
+</div>
+
+<div>
+
+<p>
+<strong>The work:</strong>
+Built and maintained trackers for deadlines, subscriptions, filings,
+payments, and operational follow-ups alongside documented processes.
+</p>
+
+<p>
+<strong>What I brought:</strong>
+A systems mindset — making information easier to see, update,
+hand off, and act on.
+</p>
+
+<div class="tags">
+<span>SOPs</span>
+<span>Google Sheets</span>
+<span>Process Design</span>
+<span>Operations</span>
+</div>
+
+</div>
+</div>
+</article>
+
+</section>
+
+<section class="section tools">
+
+<div class="label">04 / TOOLS</div>
+
+<div class="tool-layout">
+
+<div>
+<h2>
+Tools are just tools.<br>
+Knowing how to use them is what matters.
+</h2>
+</div>
+
+<div class="tool-list">
+<span>Google Workspace</span>
+<span>Slack</span>
+<span>Notion</span>
+<span>Zendesk</span>
+<span>HubSpot</span>
+<span>Salesforce</span>
+<span>Stripe</span>
+<span>Aircall</span>
+<span>Five9</span>
+<span>Genesys</span>
+<span>Tableau</span>
+<span>Hubstaff</span>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<div class="label">05 / HOW I WORK</div>
+
+<div class="process-grid">
+
+<div>
+<small>01</small>
+<h3>Understand</h3>
+<p>I learn your business, priorities, systems, and expectations.</p>
+</div>
+
+<div>
+<small>02</small>
+<h3>Organize</h3>
+<p>I turn scattered information into clear tasks, trackers, and workflows.</p>
+</div>
+
+<div>
+<small>03</small>
+<h3>Execute</h3>
+<p>I handle the details and keep work moving without constant supervision.</p>
+</div>
+
+<div>
+<small>04</small>
+<h3>Communicate</h3>
+<p>I keep you updated, flag issues early, and follow through.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+
+<div class="label">06 / LET'S CONNECT</div>
+
+<h2>
+Have something you need<br>
+<em>help keeping on track?</em>
+</h2>
+
+<p>
+I'd love to hear what you're working on and where you need support.
+</p>
+
+<a class="button primary" href="mailto:YOUR-EMAIL-HERE">
+Let's work together →
+</a>
+
+</section>
+
+<footer>
+<div>Love Umali</div>
+<div>Virtual Operations & Executive Support</div>
+<div>© 2026</div>
+</footer>
+
+</body>
+</html>
